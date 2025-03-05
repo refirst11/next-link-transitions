@@ -1,6 +1,6 @@
 {
   "name": "next-link-transitions",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "View Transitions with Next Server Components",
   "keywords": [
     "next",
@@ -9,7 +9,6 @@
     "server component",
     "app router"
   ],
-  "private": true,
   "author": "Refirst",
   "license": "MIT",
   "sideEffect": false,
