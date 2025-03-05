@@ -1,0 +1,47 @@
+{
+  "name": "next-link-transitions",
+  "version": "0.0.1",
+  "description": "View Transitions with Next Server Components",
+  "keywords": [
+    "next",
+    "next.js",
+    "view transitions",
+    "server component",
+    "app router"
+  ],
+  "private": true,
+  "author": "Refirst",
+  "license": "MIT",
+  "sideEffect": false,
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "types/index.d.ts",
+  "files": [
+    "dist/",
+    "types/"
+  ],
+  "scripts": {
+    "build": "pnpm shx rm -rf dist types && pnpm esm && pnpm cjs",
+    "cjs": "tsc --project tsconfig.cjs.json",
+    "esm": "tsc --project tsconfig.esm.json && node build.esm.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "@types/react": "^19.0.10",
+    "fast-glob": "^3.3.3",
+    "next": "^15.1.2",
+    "shx": "^0.3.4",
+    "typescript": "^5.8.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
