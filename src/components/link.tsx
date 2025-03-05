@@ -8,6 +8,7 @@ import type { UrlObject } from "url";
 type Url = string | UrlObject;
 interface ViewTransitionsLinkProps extends DOMAttributes<HTMLAnchorElement> {
   children: React.ReactNode;
+  className?: string;
   href: Url;
   replace?: boolean;
   scroll?: boolean;
@@ -18,6 +19,7 @@ interface ViewTransitionsLinkProps extends DOMAttributes<HTMLAnchorElement> {
 
 export const Link = ({
   children,
+  className,
   href,
   replace = false,
   scroll = true,
@@ -28,6 +30,7 @@ export const Link = ({
 }: ViewTransitionsLinkProps) => {
   return (
     <NextLink
+      className={className}
       href={href}
       replace={replace}
       scroll={scroll}
