@@ -16,7 +16,7 @@ import "view.css";
 
 export default function Component() {
   return (
-    <Link href="/about" entry="entry" exit="exit">
+    <Link href="/about" old="old" entry="entry">
       Go to /about
     </Link>
   );
@@ -32,8 +32,8 @@ export default function Component() {
   view-transition-name: entry-transition;
 }
 
-.exit {
-  view-transition-name: exit-transition;
+.old {
+  view-transition-name: old-transition;
 }
 
 @keyframes entry-transition {
@@ -45,7 +45,7 @@ export default function Component() {
   }
 }
 
-@keyframes exit-transition {
+@keyframes old-transition {
   from {
     opacity: 1;
   }
@@ -58,8 +58,8 @@ export default function Component() {
   animation: entry-transition 1.5s ease;
 }
 
-::view-transition-old(exit-transition) {
-  animation: exit-transition 1.5s ease;
+::view-transition-old(old-transition) {
+  animation: old-transition 1.5s ease;
 }
 ```
 
