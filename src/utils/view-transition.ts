@@ -1,10 +1,10 @@
-export function viewTransition(entry?: string, exit?: string) {
+export function viewTransition(entry?: string, old?: string) {
   if (!document.startViewTransition) {
     return;
   }
-  if (exit) document.documentElement.classList.add(exit);
+  if (old) document.documentElement.classList.add(old);
   document.startViewTransition(() => {
-    if (exit) document.documentElement.classList.remove(exit);
+    if (old) document.documentElement.classList.remove(old);
     if (entry) document.documentElement.classList.add(entry);
   });
 }

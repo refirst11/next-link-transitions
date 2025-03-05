@@ -14,7 +14,7 @@ interface ViewTransitionsLinkProps extends DOMAttributes<HTMLAnchorElement> {
   scroll?: boolean;
   prefetch?: boolean | null;
   entry?: string;
-  exit?: string;
+  old?: string;
 }
 
 export const Link = ({
@@ -25,7 +25,7 @@ export const Link = ({
   scroll = true,
   prefetch = null,
   entry,
-  exit,
+  old,
   ...props
 }: ViewTransitionsLinkProps) => {
   return (
@@ -38,7 +38,7 @@ export const Link = ({
       {...props}
       onClick={(e) => {
         props.onClick?.(e);
-        viewTransition(entry, exit);
+        viewTransition(entry, old);
       }}
     >
       {children}
