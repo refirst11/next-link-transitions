@@ -1,12 +1,12 @@
 {
   "name": "next-link-transitions",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "View Transitions with Next Server Components",
   "keywords": [
     "next",
     "next.js",
     "view transitions",
-    "server component",
+    "server components",
     "app router"
   ],
   "author": "Refirst",
