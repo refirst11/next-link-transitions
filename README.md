@@ -10,13 +10,15 @@ npm install next-link-transitions
 
 ## Usage
 
+Set the class names that have the keyframes animation set to old and next.
+
 ```tsx
 import { Link } from "next-link-transitions";
 import "view.css";
 
 export default function Component() {
   return (
-    <Link href="/about" old="old" entry="entry">
+    <Link href="/about" old="old" next="next">
       Go to /about
     </Link>
   );
@@ -28,15 +30,15 @@ export default function Component() {
 ```css
 // view.css
 
-.entry {
-  view-transition-name: entry-transition;
+.next {
+  view-transition-name: next-transition;
 }
 
 .old {
   view-transition-name: old-transition;
 }
 
-@keyframes entry-transition {
+@keyframes next-transition {
   from {
     opacity: 0;
   }
@@ -54,8 +56,8 @@ export default function Component() {
   }
 }
 
-::view-transition-new(entry-transition) {
-  animation: entry-transition 1.5s ease;
+::view-transition-new(next-transition) {
+  animation: next-transition 1.5s ease;
 }
 
 ::view-transition-old(old-transition) {
