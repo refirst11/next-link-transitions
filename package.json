@@ -28,7 +28,7 @@
     "types/"
   ],
   "scripts": {
-    "build": "pnpm shx rm -rf dist types && pnpm esm && pnpm cjs",
+    "build": "rimraf dist types && pnpm esm && pnpm cjs",
     "cjs": "tsc --project tsconfig.cjs.json",
     "esm": "tsc --project tsconfig.esm.json && node build.esm.js"
   },
@@ -37,7 +37,7 @@
     "@types/react": "^19.0.10",
     "fast-glob": "^3.3.3",
     "next": "^15.1.2",
-    "shx": "^0.3.4",
+    "rimraf": "^6.0.1",
     "typescript": "^5.8.2"
   },
   "publishConfig": {
