@@ -1,6 +1,6 @@
 {
   "name": "next-link-transitions",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "View Transitions with Next Server Components",
   "keywords": [
     "next",
@@ -10,6 +10,10 @@
     "app router"
   ],
   "author": "Refirst",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/refirst11/next-link-transitions.git"
+  },
   "license": "MIT",
   "sideEffect": false,
   "exports": {
